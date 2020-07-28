@@ -3,11 +3,11 @@
 session_start();
 
 $GLOBALS['config'] = array(
-	'mysql' => array(
+	'pgsql' => array(
 		'host' =>'ruby.db.elephantsql.com',
 		'username' => 'qgsmikpz',
 		'password' => 'yLWbKfzlvzK0BrVq9vBCcpRjx21fEBFs',
-		'db' => 'KeepMyThoughts'
+		'db' => 'qgsmikpz'
 	),
 	'remember' => array(
 		'cookie_name' => 'hash',
