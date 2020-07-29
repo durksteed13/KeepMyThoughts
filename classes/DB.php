@@ -89,7 +89,6 @@ class DB {
 
 			$sql = "INSERT INTO {$table} (" . implode(', ', $keys) . ") VALUES ({$values})";
 
-
 			if(!$this->query($sql, $fields)->error()) {
 				return true;
 			}
