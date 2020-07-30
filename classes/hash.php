@@ -7,7 +7,7 @@ class Hash {
 	}
 
 	public static function salt($length) {
-		return substr(str_shuffle('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'),1,$length);;
+		return substr(str_shuffle('0123456789abcdefghijklmnopqrstuvwxyz'),1,$length);;
 	}
 
 	public static function unique() {

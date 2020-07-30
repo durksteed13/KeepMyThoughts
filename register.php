@@ -13,7 +13,7 @@ if(Input::exists()) {
 				$user->create(array('username' => Input::get('username'), 'password' => Hash::make(Input::get('password'), $salt), 'salt' => $salt, 'name' => Input::get('name'),));
 
 				Session::flash('home', 'You have been registered and can now log in');
-				header('Location: index.php');
+				Redirect::to('index.php');
 			} catch(Exception $e) {
 				die($e->getMessage());
 			}

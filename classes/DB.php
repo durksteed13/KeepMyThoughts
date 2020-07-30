@@ -91,7 +91,7 @@ class DB {
 
 			if(!$this->query($sql, $fields)->error()) {
 				return true;
-			}
+;			}
 		}
 		return false;
 	}
