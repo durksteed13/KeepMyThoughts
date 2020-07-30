@@ -53,7 +53,6 @@ class Validate {
 	}
 
 	private function addError($error) {
-		echo 'here';
 		$this->_errors[] = $error;
 	}
 
