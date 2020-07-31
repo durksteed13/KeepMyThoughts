@@ -15,7 +15,7 @@ class Validate {
 				$item = escape($item);
 
 				if ($rule === 'required' && empty($value)) {
-					$this->addError("{$item} is required");
+					$this->addError("Please enter a valid {$item}");
 				} else if(!empty($value)) {
 					switch($rule) {
 						case 'min':
@@ -25,12 +25,12 @@ class Validate {
 						break;
 						case 'max':
 							if(strlen($value) > $rule_value) {
-								$this->addError("{$item} must be a maximum of {$rule_value} characters");
+								$this->addError("{$item} can be a maximum of {$rule_value} characters");
 							}
 						break;
 						case 'matches':
 							if($value != $source[$rule_value]) {
-								$this->addError("{$rule_value} must match {$item}");
+								$this->addError('Passwords must match');
 							}
 						break;
 						case 'unique':

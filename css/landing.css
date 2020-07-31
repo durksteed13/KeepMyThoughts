@@ -8,7 +8,7 @@
 .exampleThought {
 	margin-top: 75px;
 	width: 60%;
-	min-width: 400px;
+	min-width: 600px;
 	height: 150px;
 	background: #FFFFFF;
 	box-shadow: 1px 1px 1px 1px #0328DD;
@@ -26,7 +26,7 @@
 }
 
 .exampleNote {
-	margin-left: 5%;
+	margin-left: 25px;
 	margin-top: 35px;
 	width: 90%;
 	min-width: 325px;
@@ -42,7 +42,7 @@
 }
 
 .exampleDate {
-	margin-left: 5%;
+	margin-left: 25px;
 	margin-top: 25px;
 	font-family: Verdana, Geneva, sans-serif;
 	text-align: left;
@@ -97,7 +97,7 @@
 .mockup {
 	margin-top: 75px;
 	width: 100%;
-	background-color: #EBEEFF;
+	background-color: #0A007A;
 	overflow: hidden;
 }
 
@@ -108,6 +108,8 @@
 	padding-top: 50px;
 	width: 650px;
 	height: 425px;
+	min-width: 450px;
+	min-height: 300px;
 }
 
 .mockupText {
@@ -125,7 +127,7 @@
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 30px;
 	text-align: center;
-	color: #0328DD;
+	color: #FFFFFF;
 }
 
 .mockupList {
@@ -138,17 +140,22 @@
 
 .mockupList li {
 	margin-top: 35px;
+	margin-right: 20px;
 }
 
 .mockupList li p {
-	color: #44484B;
+	color: #FFFFFF;
 }
 
 .mockupText a {
-	color: #0328DD;
+	color: #FFFFFF;
+	font-size: 22px;
 }
 
 .final {
 	width: 100%;
-	background-color: 100px;
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
