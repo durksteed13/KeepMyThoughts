@@ -26,6 +26,17 @@ if(Input::exists()) {
 }
 ?>
 
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<?php include 'html/header.html';?>
+<body>
+	<!-- <?php include 'html/landing.html';?> -->
+	<!-- <?php include 'html/footer.html';?> -->
+</body>
+
 <form action="" method="post">
 	<div class="field">
 		<label for="username">Username</label>
@@ -50,3 +61,4 @@ if(Input::exists()) {
 	<input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
 	<input type="submit" value="Register">
 </form>
+</html>

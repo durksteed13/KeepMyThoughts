@@ -1,0 +1,19 @@
+.header {
+	width:100%;
+	background-color: #FFFFFF;
+	margin-top: 0;
+	height: 75px;
+	display: flex;
+  	align-items: center;
+  	border-top: 1px solid lightgray;
+  	justify-content: center;
+}
+
+.logo a {
+	margin-left: 25px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: #0328DD;
+	text-decoration: none;
+}

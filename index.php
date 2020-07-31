@@ -18,5 +18,5 @@ if($user->isLoggedIn()) {
 	</ul>
 	<?php
 } else {
-	echo '<p>You need to <a href="login.php">log in</a> or <a href = "register.php">register</a></p>';
+	include 'landing.php';
 }
