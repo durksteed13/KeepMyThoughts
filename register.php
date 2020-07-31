@@ -13,7 +13,7 @@
 		if(Input::exists()) {
 			if(Token::check(Input::get('token'))) {
 				$validate = new Validate();
-				$validation = $validate->check($_POST, array('Username' => array('required' => true, 'min' => 2, 'max' => 20, 'unique' => 'users'), 'Password' => array('required' => true, 'min' => 6), 'Password Confirmation' => array('required' => true, 'matches' => 'password'), 'Name' => array('required' => true, 'min' => 2, 'max' => 50)));
+				$validation = $validate->check($_POST, array('username' => array('required' => true, 'min' => 2, 'max' => 20, 'unique' => 'users'), 'password' => array('required' => true, 'min' => 6), 'confirmation' => array('required' => true, 'matches' => 'password'), 'name' => array('required' => true, 'min' => 2, 'max' => 50)));
 
 				if($validation->passed()) {
 					$user = new User();

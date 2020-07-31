@@ -13,7 +13,6 @@ class Validate {
 				
 				$value = trim($source[$item]);
 				$item = escape($item);
-
 				if ($rule === 'required' && empty($value)) {
 					$this->addError("Please enter a valid {$item}");
 				} else if(!empty($value)) {
