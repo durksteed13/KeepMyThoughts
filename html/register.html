@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/form.css">
+</head>
+<body>
+	<div class="formContainer">
+		<form class="signupForm" action="" method="post">
+			<p class="add">+</p>
+			<div class="field">
+				<input type="text" name="username" id="username" autocomplete="off" placeholder="username">
+			</div>
+
+			<div class ="field">
+				<input type="password" name="password" id="password" placeholder="password">
+			</div>
+
+			<div class ="field">
+				<input type="password" name="password_again" id="password_again" placeholder="confirm password">
+			</div>
+
+			<div class ="field">
+				<input type="text" name="name" id="name"placeholder="name">
+			</div>
+
+			<div class="buttonWrapper"><input class="button" type="submit" value="Register"></div>
+			<input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
+		</form>
+	</div>
+</body>
+</html>
