@@ -5,7 +5,6 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<?php include 'html/header.html';?>
 <body>
 	<div class="errorWrapper">
 	<?php
@@ -43,5 +42,4 @@
 	</div>
 <?php include 'html/login.html';?>
 </body>
-<?php include 'html/footerFixed.html';?>
 </html>

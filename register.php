@@ -3,10 +3,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
-<?php include 'html/header.html';?>
 <body>
+	<div class="navigationHeader">
+		<a href="index.html" id="logo">KEEP MY THOUGHTS</a>
+		<nav id="topNav">
+			<ul class="navigation">
+					<li><a href="register.php">Sign Up</a></li>
+					<li><a href="login.php">Log In</a></li>
+			</ul>
+		</nav>
+	</div>
 	<div class="errorWrapper">
 	<?php 
 
@@ -14,7 +22,6 @@
 			if(Token::check(Input::get('token'))) {
 				$validate = new Validate();
 				$validation = $validate->check($_POST, array('username' => array('required' => true, 'min' => 2, 'max' => 20, 'unique' => 'users'), 'password' => array('required' => true, 'min' => 6), 'confirmation' => array('required' => true, 'matches' => 'password'), 'name' => array('required' => true, 'min' => 2, 'max' => 50)));
-
 				if($validation->passed()) {
 					$user = new User();
 					$salt = Hash::salt(32);
@@ -38,8 +45,6 @@
 		}
 	?>
 	</div>
-
-<?php include 'html/register.html';?>
+	<?php include 'html/register.html';?>
 </body>
-<?php include 'html/footerFixed.html';?>
 </html>

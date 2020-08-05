@@ -1,99 +1,79 @@
 .errorWrapper {
+	margin-top: 75px;
 	justify-content: center;
 	display: flex;
 	height: 100px;
 	width: 100%;
 	align-items: center;
 }
-
 .error {
+	max-width: 500px;
 	text-align: center;
 	display: block;
 	margin-top: 5px;
 	font-family: Verdana, Geneva, sans-serif;
-	font-size: 14px;
-	border-left: 2px solid #ED474A;
+	font-size: 16px;
+	border-left: 2px solid #EA526F;
 	padding: 5px;
-	color: gray;
+	color: #3F3D56;
 }
-
 .formContainer {
 	width: 100%;
 	display: flex;
 	justify-content: center;
 }
-
 .loginForm {
 	height: 375px;
 	width: 400px;
-	box-shadow: 1px 1px 1px 1px #0328DD;
+	box-shadow: 1px 1px 1px 1px #EA526F;
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 16px;
-	color: #0328DD;
+	color: #EA526F;
 }
-
 .signupForm {
 	height: 475px;
 	width: 400px;
-	box-shadow: 1px 1px 1px 1px #0328DD;
+	box-shadow: 1px 1px 1px 1px #EA526F;
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 16px;
-	color: #0328DD;
+	color: #EA526F;
 }
-
 .field {
 	margin: 25px;
 	display: flex;
 	justify-content: center;
 }
-
-.add {
-	float: right;
-	margin-right: 10px;
-	margin-top: 10px;
-	font-family: Verdana, Geneva, sans-serif;
-	text-align: right;
-	font-size: 20px;
-	color: #0328DD;
-	text-decoration: none;
-}
-
 input {
 	margin-top: 25px;
 }
-
 input:focus {
 	outline: none;
 }
-
 input[type=text] {
 	padding-bottom: 2px;
 	border: none;
-	border-bottom: 1px solid #0328DD;
+	border-bottom: 1px solid #EA526F;
 	width: 350px;
-	color: #0328DD;
+	color: #3F3D56;
 	text-align: center;
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 20px;
 }
-
 input[type=password] {
 	padding-bottom: 2px;
 	border: none;
-	border-bottom: 1px solid #0328DD;
+	border-bottom: 1px solid #EA526F;
 	width: 350px;
-	color: #0328DD;
+	color: #3F3D56;
 	text-align: center;
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 20px;
 }
-
 .buttonWrapper {
 	margin-top: -5px;
 	display: flex;
 	justify-content: center;
 }
-
 .button {
 	width: 350px;
 	cursor: pointer;
@@ -104,25 +84,22 @@ input[type=password] {
 	background-color: #FFFFFF;
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 18px;
-	color: #0328DD;
+	color: #EA526F;
 	text-decoration: none;
-	border: 1px solid #0328DD;
+	border: 1px solid #EA526F;
 }
-
 .button:hover {
-	background-color: #0328DD;
+	background-color: #EA526F;
 	border: 1px solid #FFFFFF;
 	color: #FFFFFF;
 }
-
 .linkWrapper {
 	margin-top: 25px;
 	display: flex;
 	justify-content: center;
 }
-
 a {
 	text-align: center;
-	color: gray;
+	color: #3F3D56;
 	font-size: 14px;
 }

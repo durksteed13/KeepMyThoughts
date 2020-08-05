@@ -18,5 +18,5 @@ if($user->isLoggedIn()) {
 	</ul>
 	<?php
 } else {
-	include 'landing.php';
+	include 'index.html';
 }
