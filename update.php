@@ -19,25 +19,20 @@ if(Input::exists()) {
 		try {
 			$user->update(array('name' => Input::get('name')));
 
-			Session::flash('home', 'Your profile has been updated');
+			// Session::flash('home', 'Your profile has been updated');
 			Redirect::to('index.php');
 		} catch(Exception $e) {
 			die($e->getMessage());
 		}
 	} else {
+		$errorText = '';
+		$x = 1;
 		foreach($validation->errors() as $error) {
-			echo $error, '<br>';
+			$errorText .= $error . ', ';  
 		}
+		$errorText = substr($errorText, 0, -2);
+		echo "<div class='error'>{$errorText}</div>";
 	}
 }
-?>
 
-<form action="" method="post">
-	<div class="field">
-		<label for="name">Name</label>
-		<input type="text" name="name" value="<?php echo escape($user->data()->name);?>">
-
-		<input type="submit" value="Update">
-		<input type="hidden" name="token" value="<?php echo Token::generate();?>">
-	</div>
-</form>
+include 'changeName.html';

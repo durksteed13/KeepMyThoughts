@@ -1,23 +1,19 @@
-.errorWrapper {
-	margin-top: 75px;
-	justify-content: center;
-	display: flex;
-	height: 100px;
-	width: 100%;
-	align-items: center;
+* {
+	background-color: #3F3D56;
 }
 .error {
-	max-width: 500px;
 	text-align: center;
 	display: block;
-	margin-top: 5px;
+	margin-top: 50px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 16px;
-	border-left: 2px solid #EA526F;
-	padding: 5px;
-	color: #3F3D56;
+	color: #FFF;
+	background-color: #EA526F;
 }
 .formContainer {
+	margin-top: 50px;
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -25,10 +21,11 @@
 .loginForm {
 	height: 375px;
 	width: 400px;
-	box-shadow: 1px 1px 1px 1px #EA526F;
+	box-shadow: 2px 2px 2px 2px #EA526F;
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 16px;
 	color: #EA526F;
+	background-color: #FFF;
 }
 .signupForm {
 	height: 475px;
@@ -37,14 +34,35 @@
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 16px;
 	color: #EA526F;
+	background-color: #FFF;
+}
+.changeNameForm {
+	height: 250px;
+	width: 400px;
+	box-shadow: 1px 1px 1px 1px #EA526F;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	color: #EA526F;
+	background-color: #FFF;
+}
+.changePasswordForm {
+	height: 400px;
+	width: 400px;
+	box-shadow: 1px 1px 1px 1px #EA526F;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	color: #EA526F;
+	background-color: #FFF;
 }
 .field {
 	margin: 25px;
 	display: flex;
 	justify-content: center;
+	background-color: #FFF;
 }
 input {
 	margin-top: 25px;
+	background-color: #FFF;
 }
 input:focus {
 	outline: none;
@@ -69,10 +87,14 @@ input[type=password] {
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 20px;
 }
+label {
+	background-color: #FFF;
+}
 .buttonWrapper {
 	margin-top: -5px;
 	display: flex;
 	justify-content: center;
+	background-color: #FFF;
 }
 .button {
 	width: 350px;
@@ -97,9 +119,54 @@ input[type=password] {
 	margin-top: 25px;
 	display: flex;
 	justify-content: center;
+	background-color: #FFF;
 }
 a {
+	font-family: Verdana, Geneva, sans-serif;
 	text-align: center;
 	color: #3F3D56;
 	font-size: 14px;
+	background-color: #FFF;
+}
+.bottomWrapper {
+	width: 100%;
+	margin-top: 25px;
+	justify-content: center;
+	text-align: center;
+}
+#bottomLogo {
+	font-size: 24px;
+	color: #EA526F;
+	font-weight: bold;
+	text-decoration: none;
+	background-color: transparent;
+	text-decoration: underline;
+}
+
+@media only screen and (max-width: 770px) {
+	.formContainer {
+		margin-top: 150px;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+	.loginForm {
+		height: 375px;
+		width: 300px;
+	}
+	.signupForm {
+		height: 475px;
+		width: 300px;
+	}
+	.changeNameForm {
+		height: 250px;
+		width: 300px;
+	}
+	.changePasswordForm {
+		height: 400px;
+		width: 300px;
+	}
+	.button {
+		width: 200px;
+	}
 }

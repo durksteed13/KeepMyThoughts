@@ -2,6 +2,20 @@
 	margin: 0;
 	padding: 0;
 }
+.betaBanner {
+	margin-top: 90px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 100%;
+	background-color: #3F3D56;
+	color: #fff;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	text-align: center;
+}
+.betaBanner a {
+	color: #FFF;
+}
 #landingFirst {
 	height: 100vh;
 	background-image: url(headerimg.svg);
@@ -47,7 +61,7 @@
 	margin-left: 10%;
 	margin-right: 5%;
 	max-width: 450px;
-	padding-top: 175px;
+	padding-top: 100px;
 	background-color: #FFF;
 }
 #landingFirstText h1 {
@@ -115,14 +129,68 @@
 	margin-top: 100px;
 	background-color: #EA526F;
 }
-
-
+#userDashboard {
+	width: 20%;
+	min-width: 250px;
+	height: 100vh;
+	background-color: #3F3D56;
+}
+.userInfo {
+	padding-top: 25px;
+	justify-content: center;
+	text-align: center;
+	font-family: Verdana, Geneva, sans-serif;
+}
+#profile {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background-color: #FFF;
+}
+.userInfoText {
+	margin-top: 25px;
+}
+#userLink {
+	font-size: 22px;
+	font-weight: bold;
+	color: #EA526F;
+}
+.userInfoText p {
+	margin-top: 15px;
+	font-size: 16px;
+	color: #FFF;
+}
+#noteNumber {
+	padding-bottom: 50px;
+	border-bottom: 1px solid #EA526F;
+}
+.userOptions {
+	margin-top: 50px;
+	margin-left: 20%;
+	list-style: none;
+	text-align: left;
+}
+.userOptions ul {
+	list-style: none;
+}
+.userOptions a {
+	font-size: 12px;
+	color: #FFF;
+}
+.userOptions li {
+	margin-bottom: 15px;
+}
+#logoutUser {
+	margin-top: 10px;
+	color: #FFF;
+	font-size: 16px;
+}
 @media only screen and (max-width: 770px) {
 	#landingFirst {
 		background-image: none;
 	}
 	#landingFirstText {
-		padding-top: 125px;
+		padding-top: 75px;
 	}
 	#landingSecond {
 		margin-top: 0px;
@@ -130,10 +198,34 @@
 	.secondRight, .secondLeft {
 		flex-basis: 100%;
 	}
-
 	.secondRight h1, ul {
 		margin-left: 10%;
 		margin-right: 5%;
 	}
-
+	#userDashboard {
+		width: 5%;
+		min-width: 150px;
+		height: 100vh;
+		background-color: #3F3D56;
+	}
+	.userInfo {
+		padding-top: 75px;
+	}
+	#profile {
+	width: 75px;
+	height: 75px;
+	}
+	.userInfoText {
+		margin-top: 15px;
+	}
+	.userInfoText p {
+		font-size: 13px
+	}
+	#userLink {
+		font-size: 18px;
+	}
+	.userOptions {
+		margin-top: 25px;
+		margin-left: 10%;
+	}
 }
