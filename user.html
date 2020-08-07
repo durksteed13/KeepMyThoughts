@@ -6,20 +6,13 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
-	<section id="userDashboard">
-		<div class="userInfo">
-			<img id="profile" src="defaultprofileimg.svg">
-			<div class="userInfoText">
-				<a id="userLink" href ="index.php"><?php echo escape($user->data()->username); ?></a>
-				<p><?php echo escape($user->data()->name); ?></p>
-				<p id="noteNumber">Number of notes: 0</p>
-				<ul class="userOptions">
-					<li><a href="update.php">Update Name</a></li>
-					<li><a href="changepwd.php">Change Password</a></li>
-					<a id="logoutUser" href="logout.php">Log out</a>
-				</ul>
+	<style>*{background-color: #EA526F;}</style>
+	<div class="userWrapper">
+		<section id="userNotes">
+			<div class="userNavigation">
 			</div>
-		</div>
-	</section>
+			<a id="userNewNote" href="newNote.php">+ new note</a>
+		</section>
+	</div>
 </body>
 </html>
