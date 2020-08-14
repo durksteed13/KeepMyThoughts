@@ -10,6 +10,15 @@
 	<div class="userWrapper">
 		<section id="userNotes">
 			<div class="userNavigation">
+				<a href="username"></a>
+				<div class="dropdown">
+  <button class="dropbtn"><?php echo escape($user->data()->username);?></button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
 			</div>
 			<a id="userNewNote" href="newNote.php">+ new note</a>
 		</section>

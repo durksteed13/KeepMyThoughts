@@ -8,7 +8,7 @@ if(Session::exists('home')) {
 
 $user = new User();
 if($user->isLoggedIn()) {
-	include 'user.html';
+	include 'html/user.html';
 } else {;
-	include 'index.html';
+	include 'html/index.html';
 }
