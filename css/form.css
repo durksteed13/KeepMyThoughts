@@ -145,7 +145,7 @@ a {
 
 @media only screen and (max-width: 770px) {
 	.formContainer {
-		margin-top: 150px;
+		margin-top: 50px;
 		width: 100%;
 		display: flex;
 		justify-content: center;

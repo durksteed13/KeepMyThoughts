@@ -2,26 +2,36 @@
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
-<body>
-	<style>*{background-color: #EA526F;}</style>
-	<div class="userWrapper">
-		<section id="userNotes">
-			<div class="userNavigation">
-				<a href="username"></a>
-				<div class="dropdown">
-  <button class="dropbtn"><?php echo escape($user->data()->username);?></button>
-  <div class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
-</div>
-			</div>
-			<a id="userNewNote" href="newNote.php">+ new note</a>
-		</section>
+	<div class="navigationHeader">
+		<div class="dropdown">
+		  <button class="dropbtn"><?php echo escape($user->data()->username);?></button>
+		  <div class="dropdown-content">
+		    <a href="profile.php">Profile</a>
+		    <a href="changeName.php">Change Name</a>
+		    <a href="changepwd.php">Change Password</a>
+		    <a href="logout.php">Logout</a>
+		  </div>
+		</div>
+
+		<nav id="topNav">
+			<ul class="navigation">
+					<li><a href="logout.php">Log Out</a></li>
+			</ul>
+		</nav>
 	</div>
+
+	<section id="newNote">
+		
+	</section>
+
+	<?php echo escape($user->data()->username);?>
+
+	<section id="footer">
+		<a href="index.php">Keep My Thoughts 2020</a>
+		<p>A fun project by Durk Steed Jr.</p>
+	</section>
 </body>
 </html>
