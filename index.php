@@ -17,7 +17,6 @@ if($user->isLoggedIn()) {
 			}
 		}
 	}
-	
 	include 'html/user.html';
 } else {;
 	include 'html/index.html';

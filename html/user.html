@@ -13,6 +13,9 @@
   		} else {
     		x.style.display = "none";
   		}}
+  	$(document).ready(function(){
+    $('textarea').autosize();   
+});
 </script>
 <body>
 	<div class="navigationHeader">
@@ -43,8 +46,26 @@
 			</form>
 		</div>
 		</details>
-		<!-- <div class="userWelcome"><?php echo escape($user->data()->name);?></div> -->
 	</section>
+
+	<section id="displayedNotes">
+		<!-- <div class="userWelcome"><?php echo escape($user->data()->name);?>'s Thoughts:</div> -->
+		<div class="userLine"></div>
+		<div class="notesList">
+			<?php 
+				$dataB = DB::getInstance()->query("SELECT thought from thoughts WHERE username='durks'");
+				if(!$dataB->count()) {
+					echo "You have not saved any thoughts, save one now!";
+				} else {
+					foreach (array_reverse($dataB->results()) as $result) {
+						echo "<div class='noteShownBanner'><div class='noteShown'><textarea id='noteText' readonly >{$result->thought}</textarea></div></div>";
+					}
+				}
+			?>
+		</div>
+	</section>
+
+	<div class="betaBanner"><p>Keep My Thoughts is currently in a beta stage. More features are coming soon! To see a list of upcoming developments, <a href='upcoming.php'>click here</a></p></div>
 		
 	<section id="footer">
 		<a href="index.php">Keep My Thoughts 2020</a>

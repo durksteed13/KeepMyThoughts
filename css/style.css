@@ -7,6 +7,9 @@
     -o-user-select: none;
     user-select: none;
 }
+textarea {
+	resize: none;
+}
 .betaBanner {
 	margin-top: 90px;
 	padding-top: 10px;
@@ -248,8 +251,43 @@ details summary::-webkit-details-marker {
 	padding: 10px 10px;
 }
 .userWelcome {
+	margin-left: 5%;
+	margin-bottom: 5px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	color: #3F3D56;
 }
-
+.userLine {
+	height: 2px;
+	background-color: #3F3D56;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-bottom: 25px;
+}
+#displayedNotes {
+	margin-top: 50px;
+	min-height: 500px;
+}
+.noteShownBanner {
+	margin-top: 10px;
+	margin-left: 5%;
+	margin-right: 5%;
+	border-top: 15px solid #3F3D56;
+}
+.noteShown {
+	margin-bottom: 50px;
+	border: 10px solid #EA526F;
+}
+#noteText {
+	padding-top: 10px;
+	padding-left: 10px;
+	width: 99%;
+	border: none;
+	outline: none;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	min-height: 100px;
+}
 @media only screen and (max-width: 770px) {
 	.betaBanner p {
 		margin-left: 5%;

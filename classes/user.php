@@ -100,6 +100,10 @@ class User {
 		return $this->_data;
 	}
 
+	public function db() {
+		return $this->_db;
+	}
+
 	public function isLoggedIn() {
 		return $this->_isLoggedIn;
 	}
