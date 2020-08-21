@@ -37,6 +37,12 @@ class User {
 		}
 	}
 
+	public function createThought($fields = array()) {
+		if(!$this->_db->insert('thoughts', $fields)) {
+			throw new Exception('There was a problem saving note');
+		}
+	}
+
 	public function find($user = null) {
 		if($user) {
 			$field = (is_numeric($user)) ? 'id' : 'username';

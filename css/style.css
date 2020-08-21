@@ -1,6 +1,11 @@
 *{
 	margin: 0;
 	padding: 0;
+	-webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
 }
 .betaBanner {
 	margin-top: 90px;
@@ -194,6 +199,53 @@
 }
 #newNote {
 	margin-top: 100px;
+	font-family: Verdana, Geneva, sans-serif;
+}
+details summary {
+	background-color: #3F3D56;
+	color: #FFF;
+	margin-left: 5%;
+	margin-right: 5%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-indent: 25px;
+	font-style: italic;
+	cursor: pointer;
+	outline: none;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+#newNoteFormContainer {
+	margin-left: 5%;
+	margin-right: 5%;
+	background-color: #EA526F;
+}
+.thoughtField textarea {
+	width: 90%;
+	margin-left: 10px;
+	outline: none;
+	border: none;
+	color: #3F3D56;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	padding-left: 5px;
+	margin-top: 25px;
+	height: 75px;
+}
+.thoughtButtonWrapper {
+	margin-left: 10px;
+	margin-top: 10px;
+	padding-bottom: 25px;
+}
+.thoughtButton {
+	cursor: pointer;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	background-color: #3F3D56;
+	border: none;
+	color: #FFF;
+	padding: 10px 10px;
 }
 .userWelcome {
 }

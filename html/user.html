@@ -5,6 +5,16 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
+<script language="JavaScript">
+	function showHide(id) {
+  		var x = document.getElementById(id);
+  		if (x.style.display === "none") {
+    		x.style.display = "block";
+  		} else {
+    		x.style.display = "none";
+  		}}
+</script>
+<body>
 	<div class="navigationHeader">
 		<a href="index.php" id="logo">KEEP MY THOUGHTS</a>
 
@@ -22,7 +32,18 @@
 	</div>
 
 	<section id="newNote">
-		<div class="userWelcome"><?php echo escape($user->data()->name);?></div>
+		<details>
+			<summary>Add New Thought</summary>
+			<div id="newNoteFormContainer">
+			<form class="newNoteForm" action="" method="post">
+				<div class="thoughtField">
+				<textarea required="true" name="thought" id="thought" placeholder="Type a new thought here"></textarea></div>
+				<div class="thoughtButtonWrapper"><input class="thoughtButton" type="submit" value="Save Thought"></div>
+				<input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
+			</form>
+		</div>
+		</details>
+		<!-- <div class="userWelcome"><?php echo escape($user->data()->name);?></div> -->
 	</section>
 		
 	<section id="footer">
