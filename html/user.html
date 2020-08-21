@@ -6,29 +6,25 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 	<div class="navigationHeader">
-		<div class="dropdown">
-		  <button class="dropbtn"><?php echo escape($user->data()->username);?></button>
-		  <div class="dropdown-content">
-		    <a href="profile.php">Profile</a>
-		    <a href="changeName.php">Change Name</a>
-		    <a href="changepwd.php">Change Password</a>
-		    <a href="logout.php">Logout</a>
-		  </div>
-		</div>
+		<a href="index.php" id="logo">KEEP MY THOUGHTS</a>
 
 		<nav id="topNav">
 			<ul class="navigation">
-					<li><a href="logout.php">Log Out</a></li>
+				<!-- <li><a href="logout.php">Log Out</a></li> -->
+				<li><div class="dropdown"><p class="hoverAccount">Account  v</p>
+					<div class="dropdown-content">
+					    <a id="dropdownLink" href="changeName.php">Change Name</a>
+					    <a id="dropdownLink" href="changepwd.php">Change Password</a>
+					    <a id="dropdownLink" href="logout.php">Logout</a>
+					</div></div></li>
 			</ul>
 		</nav>
 	</div>
 
 	<section id="newNote">
-		
+		<div class="userWelcome"><?php echo escape($user->data()->name);?></div>
 	</section>
-
-	<?php echo escape($user->data()->username);?>
-
+		
 	<section id="footer">
 		<a href="index.php">Keep My Thoughts 2020</a>
 		<p>A fun project by Durk Steed Jr.</p>

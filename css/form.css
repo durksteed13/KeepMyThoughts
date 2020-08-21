@@ -1,5 +1,5 @@
 * {
-	background-color: #3F3D56;
+	background-color: #EA526F;
 }
 .error {
 	text-align: center;
@@ -12,8 +12,25 @@
 	color: #FFF;
 	background-color: #EA526F;
 }
+.formTypeContainer {
+	display: flex;
+	justify-content: center;
+	margin-top: 75px;
+}
+.formType {
+	align-items: center;
+	text-align: center;
+	width: 400px;
+	background-color: #3F3D56;
+	padding: 10px 0px;
+}
+.formType a {
+	font-size: 24px;
+	color: #FFF;
+	background-color: transparent;
+	text-decoration: underline;
+}
 .formContainer {
-	margin-top: 50px;
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -21,7 +38,6 @@
 .loginForm {
 	height: 375px;
 	width: 400px;
-	box-shadow: 2px 2px 2px 2px #EA526F;
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 16px;
 	color: #EA526F;
@@ -128,27 +144,10 @@ a {
 	font-size: 14px;
 	background-color: #FFF;
 }
-.bottomWrapper {
-	width: 100%;
-	margin-top: 25px;
-	justify-content: center;
-	text-align: center;
-}
-#bottomLogo {
-	font-size: 24px;
-	color: #EA526F;
-	font-weight: bold;
-	text-decoration: none;
-	background-color: transparent;
-	text-decoration: underline;
-}
 
 @media only screen and (max-width: 770px) {
-	.formContainer {
-		margin-top: 50px;
-		width: 100%;
-		display: flex;
-		justify-content: center;
+	.formType {
+		width: 300px;
 	}
 	.loginForm {
 		height: 375px;

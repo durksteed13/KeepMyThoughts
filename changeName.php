@@ -30,4 +30,4 @@ if(Input::exists()) {
 	}
 }
 
-include 'changeName.html';
+include 'html/changeName.html';

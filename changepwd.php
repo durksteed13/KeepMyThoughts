@@ -36,4 +36,4 @@ if(Input::exists()) {
 	}
 }
 
-include 'changePassword.html';
+include 'html/changePassword.html';
