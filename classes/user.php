@@ -45,7 +45,7 @@ class User {
 
 	public function deleteThought($noteID) {
 		if(!$this->_db->delete('thoughts', array('id', '=', $noteID))) {
-			throw new Exception('There was a problem deleting note');
+			Redirect::to('index.php');
 		}
 	}
 

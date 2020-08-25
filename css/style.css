@@ -66,7 +66,7 @@ textarea {
 	top: 0;
 	position: fixed;
 	z-index: 2;
-	border-bottom: 1px solid #E6E6E6;
+	border-bottom: 1px solid #03045E;
 }
 #logo {
 	margin-left: 5%;
@@ -100,35 +100,42 @@ textarea {
 	background-color: #3772FF;
 }
 #landingFirstText h1 {
-	font-size: 40px;
-	color: #EA526F;
+	font-size: 36px;
+	color: #FFF;
+	font-style: italic;
+	background-color: #03045E;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 10px;
 }
 #landingFirstText p {
 	font-size: 18px;
 	color: #03045E;
-	margin-top: 40px;
-	margin-bottom: 40px;
+	background-color: #FFF;
+	padding-top: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#pAnswer {
+	padding-bottom: 25px;
+	font-style: italic;
+	margin-bottom: 50px;
 }
 #signupBtn {
 	text-decoration: none;
-	padding: 15px 30px; 
-	color: #03045E;
-	border: 2px solid #EA526F;
+	background-color: #03045E;
+	padding: 15px 50px; 
+	color: #FFF;
+	background-color: #03045E;
 }
 #signupBtn:hover {
-	color: #FFF;
-	background-color: #EA526F;
-	border: 2px solid #FFF;
-}
-#loginLink {
-	padding-top: 40px;
-	color: orange;
+	background-color: #0608B2;
 }
 #landingSecond {
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-	margin-top: 75px;
+	margin-top: 50px;
 }
 .secondLeft {
 	flex-basis: 50%
@@ -141,17 +148,25 @@ textarea {
 }
 .secondRight h1 {
 	font-size: 30px;
-	color: #EA526F;
 	margin-right: 5%;
+	color: #FFF;
+	font-style: italic;
+	background-color: #03045E;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 10px;
 }
 .mockupList {
 	font-size: 18px;
 	color: #03045E;
-	margin-top: 40px;
+	background-color: #FFF;
+	margin-right: 5%;
 }
 .mockupList li {
 	list-style: none;
-	margin-top: 10px;
+	padding-top: 10px;
+	padding-left: 5px;
+	padding-bottom: 5px;
 }
 #landingThird {
 	display: flex;

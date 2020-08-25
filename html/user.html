@@ -38,13 +38,12 @@
 	</section>
 
 	<section id="displayedNotes">
-		<!-- <div class="userWelcome"><?php echo escape($user->data()->name);?>'s Thoughts:</div> -->
 		<div class="userLine"></div>
 		<div class="notesList">
 			<?php 
 				$dataB = DB::getInstance()->query("SELECT * from thoughts WHERE username='durks'");
 				if(!$dataB->count()) {
-					echo "<div class='noNotes'>You have not saved any thoughts, save one now!</div>";
+					echo "<div class='noNotes'>{$user->data()->name}, you have not saved any thoughts, save one now!</div>";
 				} else {
 					foreach (array_reverse($dataB->results()) as $result) {
 						$dateString = date('F j, Y', strtotime($result->date));
