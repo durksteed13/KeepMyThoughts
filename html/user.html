@@ -40,8 +40,9 @@
 	<section id="displayedNotes">
 		<div class="userLine"></div>
 		<div class="notesList">
-			<?php 
-				$dataB = DB::getInstance()->query("SELECT * from thoughts WHERE username='durks'");
+			<?php
+				$sql = "SELECT * from thoughts WHERE username='{$user->data()->username}'";
+				$dataB = DB::getInstance()->query($sql);
 				if(!$dataB->count()) {
 					echo "<div class='noNotes'>{$user->data()->name}, you have not saved any thoughts, save one now!</div>";
 				} else {
