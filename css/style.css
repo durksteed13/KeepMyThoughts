@@ -47,9 +47,16 @@ textarea {
 	margin-top: 25px;
 	font-size: 18px;
 	margin-bottom: 25px;
+	background-color: #FFF;
+	margin-left: 5%;
+	margin-right: 5%;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 .upcoming a {
 	color: #FFF;
+	padding: 10px 10px;
+	background-color: #03045E;
 }
 #landingFirst {
 	height: 100vh;
@@ -369,6 +376,7 @@ details summary {
 	}
 	#landingFirstText {
 		padding-top: 50px;
+		margin-left: 5%;
 	}
 	#landingSecond {
 		margin-top: 0px;
@@ -377,7 +385,7 @@ details summary {
 		flex-basis: 100%;
 	}
 	.secondRight h1, ul {
-		margin-left: 10%;
+		margin-left: 5%;
 		margin-right: 5%;
 	}
 	.dropdown {
