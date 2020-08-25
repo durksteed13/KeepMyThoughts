@@ -27,4 +27,9 @@ if(Input::exists()) {
 	}
 }
 
-include 'html/register.html';
+$user = new User();
+if($user->isLoggedIn()) {
+	Redirect::to('index.php');
+} else {
+	include 'html/register.html';
+}

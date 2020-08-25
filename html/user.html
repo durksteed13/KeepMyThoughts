@@ -5,18 +5,6 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
-<script language="JavaScript">
-	function showHide(id) {
-  		var x = document.getElementById(id);
-  		if (x.style.display === "none") {
-    		x.style.display = "block";
-  		} else {
-    		x.style.display = "none";
-  		}}
-  	$(document).ready(function(){
-    $('textarea').autosize();   
-});
-</script>
 <body>
 	<div class="navigationHeader">
 		<a href="index.php" id="logo">KEEP MY THOUGHTS</a>
@@ -34,17 +22,18 @@
 		</nav>
 	</div>
 
+	<div class="betaBanner"><p>Keep My Thoughts is currently in a beta stage. More features are coming soon! To see a list of upcoming developments <a href='upcoming.php'>click here</a></p></div>
+
 	<section id="newNote">
 		<details>
 			<summary>Add New Thought</summary>
 			<div id="newNoteFormContainer">
-			<form class="newNoteForm" action="" method="post">
-				<div class="thoughtField">
-				<textarea required="true" name="thought" id="thought" placeholder="Type a new thought here"></textarea></div>
-				<div class="thoughtButtonWrapper"><input class="thoughtButton" type="submit" value="Save Thought"></div>
-				<input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
-			</form>
-		</div>
+				<form class="newNoteForm" action="" method="post">
+					<textarea id="thoughtText" required="true" name="thought" id="thought" placeholder="Type a new thought here"></textarea>
+					<div class="thoughtButtonWrapper"><input class="thoughtButton" type="submit" value="Save Thought"></div>
+					<input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
+				</form>
+			</div>
 		</details>
 	</section>
 
@@ -53,19 +42,33 @@
 		<div class="userLine"></div>
 		<div class="notesList">
 			<?php 
-				$dataB = DB::getInstance()->query("SELECT thought from thoughts WHERE username='durks'");
+				$dataB = DB::getInstance()->query("SELECT * from thoughts WHERE username='durks'");
 				if(!$dataB->count()) {
-					echo "You have not saved any thoughts, save one now!";
+					echo "<div class='noNotes'>You have not saved any thoughts, save one now!</div>";
 				} else {
 					foreach (array_reverse($dataB->results()) as $result) {
-						echo "<div class='noteShownBanner'><div class='noteShown'><textarea id='noteText' readonly >{$result->thought}</textarea></div></div>";
+						$dateString = date('F j, Y', strtotime($result->date));
+						echo "<details open id='note'>
+								<summary id='noteSummary'></summary>
+								<div class='noteShown'>
+									<textarea id='noteText' readonly>{$result->thought}</textarea>
+								</div>
+								<div class='deleteNoteContainer'>
+									<form class='deleteNote' action='' method='post'>
+										<input type='hidden' name='noteID' value='{$result->id}'>
+										<div class='deleteButtonWrapper'>
+											<p class='noteDate'>{$dateString}<p>
+											<input class='deleteButton' type='submit' value='x'>
+										</div>
+										<input type='hidden' name='tokenD' value='<?php echo Token::generate(); ?>'>
+									</form>
+								</div>
+							</details>";
 					}
 				}
 			?>
 		</div>
 	</section>
-
-	<div class="betaBanner"><p>Keep My Thoughts is currently in a beta stage. More features are coming soon! To see a list of upcoming developments, <a href='upcoming.php'>click here</a></p></div>
 		
 	<section id="footer">
 		<a href="index.php">Keep My Thoughts 2020</a>

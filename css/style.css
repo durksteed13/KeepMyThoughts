@@ -6,6 +6,10 @@
     -moz-user-select: -moz-none;
     -o-user-select: none;
     user-select: none;
+    font-family: Verdana, Geneva, sans-serif;
+}
+body {
+	background-color: #3772FF;
 }
 textarea {
 	resize: none;
@@ -14,10 +18,10 @@ textarea {
 	margin-top: 90px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	width: 100%;
-	background-color: #3F3D56;
+	width: 90%;
+	margin-left: 5%;
+	background-color: #03045E;
 	color: #fff;
-	font-family: Verdana, Geneva, sans-serif;
 	font-size: 16px;
 	text-align: center;
 }
@@ -26,13 +30,18 @@ textarea {
 }
 .upcoming {
 	margin-top: 100px;
-	font-family: Verdana, Geneva, sans-serif;
 	text-align: center;
 }
 .upcoming h1 {
+	margin-left: 5%;
+	margin-right: 5%;
 	font-size: 24px;
-	color: #3F3D56;
-	text-decoration: underline #EA526F;
+	background-color: #03045E;
+	color: #FFF;
+	padding: 3px;
+	padding-bottom: 5px;
+	font-weight: normal;
+	font-style: italic;
 }
 .upcoming p {
 	margin-top: 25px;
@@ -40,14 +49,13 @@ textarea {
 	margin-bottom: 25px;
 }
 .upcoming a {
-	color: #EA526F;
+	color: #FFF;
 }
 #landingFirst {
 	height: 100vh;
 	background-image: url(headerimg.svg);
 	background-position: center;
 	background-size: cover;
-	font-family: Verdana, Geneva, sans-serif;
 }
 .navigationHeader {
 	display: flex;
@@ -58,15 +66,15 @@ textarea {
 	top: 0;
 	position: fixed;
 	z-index: 2;
-	font-family: Verdana, Geneva, sans-serif;
 	border-bottom: 1px solid #E6E6E6;
 }
 #logo {
-	margin-left: 10%;
+	margin-left: 5%;
 	font-size: 24px;
-	color: #EA526F;
+	color: #03045E;
 	font-weight: bold;
 	text-decoration: none;
+	background-color: transparent;
 }
 #topNav {
 	margin-left: auto;
@@ -76,19 +84,20 @@ textarea {
 	float: right;
 	display: inline-block;
 	padding-bottom: 2px;
+	background-color: #FFF;
 }
 .navigation li a {
 	text-decoration: none;
 	font-size: 14px;
 	margin-right: 40px;
-	color: #3F3D56;
+	color: #03045E;
 }
 #landingFirstText {
 	margin-left: 10%;
 	margin-right: 5%;
 	max-width: 450px;
 	padding-top: 100px;
-	background-color: #FFF;
+	background-color: #3772FF;
 }
 #landingFirstText h1 {
 	font-size: 40px;
@@ -96,14 +105,14 @@ textarea {
 }
 #landingFirstText p {
 	font-size: 18px;
-	color: #3F3D56;
+	color: #03045E;
 	margin-top: 40px;
 	margin-bottom: 40px;
 }
 #signupBtn {
 	text-decoration: none;
 	padding: 15px 30px; 
-	color: #3F3D56;
+	color: #03045E;
 	border: 2px solid #EA526F;
 }
 #signupBtn:hover {
@@ -137,7 +146,7 @@ textarea {
 }
 .mockupList {
 	font-size: 18px;
-	color: #3F3D56;
+	color: #03045E;
 	margin-top: 40px;
 }
 .mockupList li {
@@ -153,35 +162,34 @@ textarea {
 	width: 100%;
 	height: 100px;
 	margin-top: 100px;
-	background-color: #EA526F;
+	background-color: #03045E;
 	text-align: center;
 	padding-top: 50px;
-	font-family: Verdana, Geneva, sans-serif;
+    bottom: 0;
 }
 #footer a {
-	color: white;
+	color: #FFF;
 	font-size: 14px;
 }
 #footer p {
 	margin-top: 5px;
-	color: white;
+	color: #FFF;
 	font-size: 8px;
 }
 .dropdown {
-	min-width: 175px;
+	min-width: 125px;
 	cursor: pointer;
 }
 .hoverAccount {
 	color: #FFF;
 	padding: 10px;
-	background-color: #EA526F;
+	background-color: #3772FF;
 	text-align: center;
 	font-size: 16px;
 }
 .dropdown-content {
   	display: none;
   	position: absolute;
-  	background-color: #3F3D56;
   	z-index: 1;
 }
 .dropdown-content a {
@@ -190,22 +198,22 @@ textarea {
   	text-decoration: none;
   	display: block;
   	width: 93%;
+  	background-color: #03045E;
 }
 #dropdownLink {
 	color: #FFF;
 }
 .dropdown-content a:hover {
-	background-color: #706E99;
+	background-color: #0608B2;
 }
 .dropdown:hover .dropdown-content {
   	display: block;
 }
 #newNote {
-	margin-top: 100px;
-	font-family: Verdana, Geneva, sans-serif;
+	margin-top: 50px;
 }
 details summary {
-	background-color: #3F3D56;
+	background-color: #03045E;
 	color: #FFF;
 	margin-left: 5%;
 	margin-right: 5%;
@@ -216,80 +224,124 @@ details summary {
 	cursor: pointer;
 	outline: none;
 }
-details summary::-webkit-details-marker {
-  display: none;
+#downArrow {
+	text-align: right;
+	font-style: none;
 }
 #newNoteFormContainer {
-	margin-left: 5%;
-	margin-right: 5%;
-	background-color: #EA526F;
+	width: 100%;
 }
-.thoughtField textarea {
+#thoughtText {
+	padding-top: 10px;
 	width: 90%;
-	margin-left: 10px;
+	margin-left: 5%;
+	text-indent: 10px;
+	font-size: 18px;
 	outline: none;
 	border: none;
-	color: #3F3D56;
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 16px;
-	padding-left: 5px;
-	margin-top: 25px;
-	height: 75px;
+	min-height: 90px;
 }
 .thoughtButtonWrapper {
-	margin-left: 10px;
-	margin-top: 10px;
-	padding-bottom: 25px;
+	margin-top: 5px;
+	padding-bottom: 10px;
 }
 .thoughtButton {
+	margin-left: 5%;
 	cursor: pointer;
-	font-family: Verdana, Geneva, sans-serif;
 	font-size: 14px;
-	background-color: #3F3D56;
+	background-color: #03045E;
 	border: none;
 	color: #FFF;
 	padding: 10px 10px;
 }
-.userWelcome {
+.thoughtButton:hover {
+	background-color: #0608B2;
+	color: #FFF;
+}
+.noNotes {
+	color: #FFF;
 	margin-left: 5%;
-	margin-bottom: 5px;
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 18px;
-	color: #3F3D56;
+	margin-right: 5%;
+	font-size: 14px;
 }
 .userLine {
 	height: 2px;
-	background-color: #3F3D56;
+	background-color: #03045E;
 	margin-left: 5%;
 	margin-right: 5%;
 	margin-bottom: 25px;
 }
 #displayedNotes {
-	margin-top: 50px;
-	min-height: 500px;
+	margin-top: 25px;
+	min-height: 400px;
 }
-.noteShownBanner {
-	margin-top: 10px;
+#note {
+	margin-bottom: 25px;
+}
+#noteSummary {
+	height: 0px;
+	color: #FFF;
 	margin-left: 5%;
 	margin-right: 5%;
-	border-top: 15px solid #3F3D56;
+	background-color: #03045E;
+}
+/*#noteSummary:hover {
+	background-color: #0608B2;
+}*/
+#noteSummary::-webkit-details-marker {
+  display: none;
 }
 .noteShown {
-	margin-bottom: 50px;
-	border: 10px solid #EA526F;
+	margin-left: 5%;
+	margin-right: 5%;
+	border: 5px solid #0608B2;
+	background-color: #FFF;
+	margin-bottom: 0px;
 }
 #noteText {
 	padding-top: 10px;
 	padding-left: 10px;
-	width: 99%;
+	width: 97%;
 	border: none;
 	outline: none;
-	font-family: Verdana, Geneva, sans-serif;
 	font-size: 18px;
 	min-height: 100px;
 }
+.deleteNote {
+	margin-top: -5px;
+	margin-left: 5%;
+	margin-right: 5%;
+	border-left: 5px solid #0608B2;
+	border-right: 5px solid #0608B2;
+}
+.deleteButtonWrapper {
+	background-color: #FFF;
+	width: 100%;
+	display: flex;
+	padding-bottom: 5px;
+	border-bottom: 7px solid #0608B2;
+}
+.noteDate {
+	width: 99%;
+	font-size: 16px;
+	font-style: italic;
+	background-color: transparent;
+	margin-left: 10px;
+	color: #03045E;
+}
+.deleteButton {
+	margin-right: 10px;
+	outline: none;
+	border: none;
+	background-color: transparent;
+	color: #03045E;
+	font-size: 20px;
+	cursor: pointer;
+	font-style: italic;
+}
 @media only screen and (max-width: 770px) {
 	.betaBanner p {
+		font-size: 12px;
 		margin-left: 5%;
 		margin-right: 5%;
 	}

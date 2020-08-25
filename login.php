@@ -28,4 +28,9 @@ if(Input::exists()) {
 	}
 }
 
-include 'html/login.html';
+$user = new User();
+if($user->isLoggedIn()) {
+	Redirect::to('index.php');
+} else {
+	include 'html/login.html';
+}

@@ -43,6 +43,12 @@ class User {
 		}
 	}
 
+	public function deleteThought($noteID) {
+		if(!$this->_db->delete('thoughts', array('id', '=', $noteID))) {
+			throw new Exception('There was a problem deleting note');
+		}
+	}
+
 	public function find($user = null) {
 		if($user) {
 			$field = (is_numeric($user)) ? 'id' : 'username';
