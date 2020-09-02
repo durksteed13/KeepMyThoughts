@@ -3,6 +3,7 @@
 <head>
 	<title>Dashboard</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta charset="UTF-8">
 </head>
@@ -50,7 +51,7 @@
 					foreach (array_reverse($dataB->results()) as $result) {
 						$dateString = date('F j, Y', strtotime($result->date));
 						echo "<details open id='note'>
-								<summary id='noteSummary'></summary>
+								<summary id='noteSummary'><p id='collapseNote'>-</summary>
 								<div class='noteShown'>
 									<textarea id='noteText' readonly>{$result->thought}</textarea>
 								</div>
@@ -74,6 +75,7 @@
 	<section id="footer">
 		<a href="index.php">Keep My Thoughts 2020</a>
 		<p>A fun project by Durk Steed Jr.</p>
+		<p>contact support@keepmythoughts.com for customer support</p>
 	</section>
 </body>
 </html>
